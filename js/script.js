@@ -8,6 +8,18 @@ for (i = 0; i < close.length; i++) {
   };
 }
 
+// Add a "checked" symbol when clicking on a list item
+let list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+    }
+  },
+  false
+);
+
 // window.onload = function () {
 //   let remBtn = document.getElementById("rem");
 //   remBtn.addEventListener("click", remItem);

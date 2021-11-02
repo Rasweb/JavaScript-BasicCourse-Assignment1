@@ -10,6 +10,12 @@ main {
   margin-left: 40%;
 }
 
+ul li.checked {
+  background: teal;
+  color: black;
+  text-decoration: line-through;
+}
+
 ul li {
   cursor: pointer;
   list-style-type: none;
