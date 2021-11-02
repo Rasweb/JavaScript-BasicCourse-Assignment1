@@ -11,7 +11,7 @@ main {
 }
 
 ul li.checked {
-  background: teal;
+  background: grey;
   color: black;
   text-decoration: line-through;
 }
@@ -29,27 +29,10 @@ main button {
   cursor: pointer;
 }
 
-#rem {
-  border-radius: 10%;
-  color: white;
-  text-align: center;
-  margin-left: 10%;
-}
-
 li {
   list-style: none;
   border: 1px solid grey;
   width: 50%;
-  text-align: left;
-  margin: 5px auto;
-}
-
-#check {
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-}
-
-.done {
-  border-radius: 10%;
+  text-align: center;
+  border-radius: 20%;
 }
