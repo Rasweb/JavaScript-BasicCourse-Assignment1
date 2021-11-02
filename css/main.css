@@ -19,11 +19,15 @@ main {
   text-align: center;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  height: 33vh;
-  border: 2px solid green;
+.close {
+  margin-left: 40%;
+}
+
+ul li {
+  cursor: pointer;
+  list-style-type: none;
+  background: #eee;
+  font-size: 14px;
 }
 
 main button {
@@ -55,6 +59,13 @@ li {
 
 .done {
   border-radius: 10%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 33vh;
+  border: 2px solid green;
 }
 
 /*# sourceMappingURL=main.css.map */

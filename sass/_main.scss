@@ -6,6 +6,17 @@ main {
   text-align: center;
 }
 
+.close {
+  margin-left: 40%;
+}
+
+ul li {
+  cursor: pointer;
+  list-style-type: none;
+  background: #eee;
+  font-size: 14px;
+}
+
 main button {
   width: 40%;
   background-color: green;
