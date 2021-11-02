@@ -1,28 +1,9 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-header {
-  display: flex;
-  flex-direction: column;
-  height: 33vh;
-  border: 2px solid steelblue;
-}
-
 main {
   display: flex;
   flex-direction: column;
   height: 60vh;
   border: 2px solid red;
   text-align: center;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  height: 33vh;
-  border: 2px solid green;
 }
 
 main button {
