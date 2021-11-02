@@ -1,7 +1,6 @@
 // Click on the element with class="close".
 // Changes the list items display to none.
 let close = document.getElementsByClassName("close");
-var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
     let div = this.parentElement;
