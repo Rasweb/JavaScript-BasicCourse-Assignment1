@@ -4,11 +4,13 @@ body {
   padding: 0;
 }
 
+/* Style the header */
 header {
-  display: flex;
-  flex-direction: column;
-  height: 33vh;
-  border: 2px solid steelblue;
+  background-color: #666;
+  padding: 15%;
+  text-align: center;
+  font-size: 30px;
+  color: white;
 }
 
 main {
