@@ -34,9 +34,9 @@ function liAdd() {
 // Click on the element with class="close".
 // Changes the list items display to none.
 function closefunc() {
-  let close = document.getElementsByClassName("close");
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
+  let closeId = document.getElementsByClassName("close");
+  for (i = 0; i < closeId.length; i++) {
+    closeId[i].onclick = function () {
       let div = this.parentElement;
       div.style.display = "none";
     };
