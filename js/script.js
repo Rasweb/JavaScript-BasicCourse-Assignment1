@@ -1,6 +1,8 @@
 window.onload = function () {
   closefunc();
   checkfunc();
+  // start();
+  liAdd();
 };
 
 // Click on the element with class="close".
@@ -25,4 +27,13 @@ function checkfunc() {
       e.target.classList.toggle("checked");
     }
   });
+}
+
+function liAdd() {
+  let theUl = document.getElementById("liUl"); // Finds the <ul>.
+  let theInpt = document.getElementById("liInput"); // Finds the <input>.
+  let theLi = document.createElement("li"); // Creates the <li>.
+  theLi.setAttribute("id", theInpt.value); // Adds the input value and Id.
+  theLi.appendChild(document.createTextNode(theInpt.value)); // Appends the input value using a textnode.
+  theUl.appendChild(theLi); // Appends to the ul to make a list
 }

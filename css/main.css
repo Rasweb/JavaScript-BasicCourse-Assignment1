@@ -21,7 +21,9 @@ main {
 }
 
 .close {
-  margin-left: 40%;
+  margin-left: 80%;
+  background-color: #f44336;
+  display: inline;
 }
 
 ul li.checked {
@@ -35,6 +37,7 @@ ul li {
   list-style-type: none;
   background: #eee;
   font-size: 14px;
+  height: 30%;
 }
 
 main button {

@@ -10,14 +10,16 @@
   </head>
   <body>
     <header>
-      <h2>To-Do List</h2>
+      <h1>To-Do List</h1>
     </header>
-
     <main>
       <div class="handle">
-        <button type="button" id="add">Add</button>
+        <!-- <button id="save">Add</button> -->
+        <input type="text" name="" id="liInput" />
+        <button onclick="liAdd()">Add to To-Do</button>
       </div>
-      <ul>
+
+      <ul id="liUl">
         <li>
           Pay bills
           <p class="close">x</p>
@@ -45,7 +47,6 @@
         </li>
       </ul>
     </main>
-
     <footer>
       <p>Contact and other</p>
     </footer>
