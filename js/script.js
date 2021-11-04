@@ -25,15 +25,21 @@ function checkfunc() {
     if (e.target.tagName === "LI") {
       // Returns the list, its allways in uppercase
       e.target.classList.toggle("checked");
+      element.classList.add("close");
     }
   });
 }
 
 function liAdd() {
+  let tagP = document.createElement("p"); // Creates <p>
+  let textP = document.createTextNode("x"); // Adds x
+  tagP.appendChild(textP); // Appends <p>x<p>
   let theUl = document.getElementById("liUl"); // Finds the <ul>.
   let theInpt = document.getElementById("liInput"); // Finds the <input>.
   let theLi = document.createElement("li"); // Creates the <li>.
-  theLi.setAttribute("id", theInpt.value); // Adds the input value and Id.
+  //theLi.setAttribute("id", theInpt.value); // Adds the input value and Id.
   theLi.appendChild(document.createTextNode(theInpt.value)); // Appends the input value using a textnode.
+  theLi.appendChild(tagP); // Appends the <p> to <li>
+  tagP.setAttribute("class", "close"); // Adds class="close"
   theUl.appendChild(theLi); // Appends to the ul to make a list
 }

@@ -1,7 +1,7 @@
 main {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 80vh;
   border: 2px solid red;
   text-align: center;
 }
@@ -9,7 +9,6 @@ main {
 .close {
   margin-left: 80%;
   background-color: #f44336;
-  display: inline;
 }
 
 ul li.checked {
@@ -23,7 +22,7 @@ ul li {
   list-style-type: none;
   background: #eee;
   font-size: 14px;
-  height: 30%;
+  height: 15%;
 }
 
 main button {
