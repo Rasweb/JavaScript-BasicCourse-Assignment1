@@ -1,24 +1,26 @@
 window.onload = function () {
-  checkfunc();
+  check();
   document.getElementById("add").addEventListener("click", liAdd);
-  removeItem();
+  document.getElementById("remove").addEventListener("click", removeItem);
   document.getElementById("sort").addEventListener("click", sort);
 };
 
 function removeItem() {
-  var listItems = document.getElementById("liUl").getElementsByTagName("li");
-  var removeButton = document.getElementById("remove");
+  // Finds the ul and the list item to change.
+  let listItems = document.getElementById("liUl").getElementsByTagName("li");
+  // Finds the remove button.
+  let removeButton = document.getElementById("remove");
 
-  removeButton.addEventListener("click", removeItem);
-  if (listItems.length === 0) return; // if there is no items in listItems then quit the function (don't attempt to remove what doesn't exist)
+  //loops through the list backwards, removes last item.
+  if (listItems.length === 0) return;
 
-  var last = listItems[listItems.length - 1];
+  let last = listItems[listItems.length - 1];
   last.parentNode.removeChild(last);
 }
 
 // Add a "checked" symbol when clicking on a list item
 // querySelector returns the first element that matches.
-function checkfunc() {
+function check() {
   let list = document.querySelector("ul");
   list.addEventListener("click", function (e) {
     if (e.target.tagName === "LI") {
@@ -49,6 +51,7 @@ function sort() {
 
   while (run) {
     run = false;
+    // li is the <li>.
     let li = sort_list.getElementsByTagName("LI");
 
     // Loop through the list.
