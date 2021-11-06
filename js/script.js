@@ -1,19 +1,18 @@
 window.onload = function () {
-  closefunc();
   checkfunc();
   document.getElementById("add").addEventListener("click", liAdd);
+  removeItem();
 };
 
-// Click on the element with class="close".
-// Changes the list items display to none.
-function closefunc() {
-  let closeId = document.getElementsByClassName("close");
-  for (i = 0; i < closeId.length; i++) {
-    closeId[i].onclick = function () {
-      let div = this.parentElement;
-      div.style.display = "none";
-    };
-  }
+function removeItem() {
+  var listItems = document.getElementById("liUl").getElementsByTagName("li");
+  var removeButton = document.getElementById("remove");
+
+  removeButton.addEventListener("click", removeItem);
+  if (listItems.length === 0) return; // if there is no items in listItems then quit the function (don't attempt to remove what doesn't exist)
+
+  var last = listItems[listItems.length - 1];
+  last.parentNode.removeChild(last);
 }
 
 // Add a "checked" symbol when clicking on a list item
@@ -30,13 +29,9 @@ function checkfunc() {
 
 //Adds the list items dynamically and the span tag with class.
 function liAdd() {
-  let tagSpan = document.createElement("SPAN"); // Creates <span>
-  tagSpan.appendChild(document.createTextNode("x")); // Appends <span>x<span>
   let theUl = document.getElementById("liUl"); // Finds the <ul>.
   let theInpt = document.getElementById("liInput"); // Finds the <input>.
   let theLi = document.createElement("li"); // Creates the <li>.
   theLi.appendChild(document.createTextNode(theInpt.value)); // Appends the input value using a textnode.
-  theLi.appendChild(tagSpan); // Appends the <span> to <li>
-  tagSpan.setAttribute("class", "close"); // Adds class="close" to span.
   theUl.appendChild(theLi); // Appends to the ul to make a list
 }

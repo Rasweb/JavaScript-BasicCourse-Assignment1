@@ -1,5 +1,7 @@
+$f: flex;
+
 main {
-  display: flex;
+  display: $f;
   flex-direction: column;
   height: 80vh;
   border: 2px solid red;
@@ -7,7 +9,7 @@ main {
 }
 
 .close {
-  color: #f44336;
+  color: red;
   font-size: 1.4rem;
 }
 
@@ -18,7 +20,7 @@ ul li.checked {
 }
 
 ul li {
-  display: flex;
+  display: $f;
   justify-content: space-between;
   cursor: pointer;
   list-style-type: none;
