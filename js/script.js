@@ -40,33 +40,30 @@ function liAdd() {
 }
 
 function sort() {
-  // Variables
-  let run = true;
-  let stop = false;
+  // Empty variables
+  let run, stop;
 
-  // Change list to input for easier use.
+  // Loop will continue until sort has been done.
   let sort_list = document.getElementById("liUl");
-
   run = true;
 
   while (run) {
     run = false;
     // li is the <li>.
     let li = sort_list.getElementsByTagName("LI");
-
     // Loop through the list.
     for (i = 0; i < li.length - 1; i++) {
       stop = false;
       if (li[i].innerHTML.toLowerCase() > li[i + 1].innerHTML.toLowerCase()) {
+        // Sorting the items in alphabeticall order.
+        // If item should be sorted mark as stop and break.
         stop = true;
         break;
       }
     }
-
-    // If item smaller than other item add after.
     if (stop) {
       li[i].parentNode.insertBefore(li[i + 1], li[i]);
-
+      // If item has been marked with stop sort the item.
       run = true;
     }
   }
