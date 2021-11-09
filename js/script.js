@@ -3,10 +3,20 @@ window.onload = function () {
   document.getElementById("remove").addEventListener("click", removeButton);
   jsLists();
   check();
+  header();
   // jsAdd();
   // jsRemove();
 };
 
+// Header
+function header() {
+  let h1 = document.createElement("h1");
+  h1.innerHTML = "To-Do List";
+  document.getElementById("header").appendChild(h1);
+  // header.appendChild(h1);
+}
+
+// Main
 // Create the Ul.
 let jsUl = document.createElement("ul");
 jsUl.id = "liUl";
@@ -56,10 +66,6 @@ function addButton() {
   let nLi = document.createElement("li"); // Creates the li.
   nLi.appendChild(document.createTextNode(inpB.value)); // Appends the input value.
   addUl.appendChild(nLi); // Appends the li to ul.
-
-  // for (let i = 0; i < liUl.length; i++) {
-
-  // }
 }
 
 // Remove button
@@ -75,3 +81,5 @@ function removeButton() {
     last.parentNode.removeChild(last);
   }
 }
+
+// Footer
