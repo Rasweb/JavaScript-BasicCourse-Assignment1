@@ -75,11 +75,3 @@ function removeButton() {
     last.parentNode.removeChild(last);
   }
 }
-
-// <form>
-// <input type="text" onfocus="this.value=''" id="liInput" />
-// <!-- onfocus clears the input field on click. -->
-// </form>
-// <button type="text" id="sort">Sort</button>
-
-// -------------------------------------------------------------//
