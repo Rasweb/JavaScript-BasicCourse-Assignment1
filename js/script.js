@@ -5,6 +5,43 @@ window.onload = function () {
   document.getElementById("sort").addEventListener("click", sort);
 };
 
+lists();
+add();
+
+function lists() {
+  //The list.
+  let jsLists = [
+    "Pay bills",
+    "Study",
+    "Train",
+    "Cook diner",
+    "Read book",
+    "Clean",
+  ];
+  let jsUl = document.createElement("ul");
+  // Id test.
+  jsUl.id = "Test";
+
+  for (let i = 0; i < jsLists.length; i++) {
+    // Loops through the list and appends to ul.
+    let jsLi = document.createElement("li");
+    jsLi.innerHTML = jsLists[i];
+    jsUl.appendChild(jsLi);
+    document.body.appendChild(jsUl);
+  }
+}
+
+function add() {
+  let addB = document.getElementById("TestButton");
+  let addInput = document.getElementById("TestInput");
+}
+
+function remove() {
+  let remB = document.getElementsById("rembutton");
+}
+
+// -------------------------------------------------------------//
+
 function removeItem() {
   // Finds the ul and the list item to change.
   let listItems = document.getElementById("liUl").getElementsByTagName("li");
