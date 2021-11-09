@@ -12,31 +12,14 @@
     <header>
       <h1>To-Do List</h1>
     </header>
-    <main>
-      <div class="control">
-        <form>
-          <input type="text" onfocus="this.value=''" id="liInput" />
-          <!-- onfocus clears the input field on click. -->
-        </form>
-        <button type="text" id="sort">Sort</button>
-        <button type="button" id="add">Add</button>
-        <button type="button" id="remove">remove</button>
+    <main id="main">
+      <div id="control">
+        <input type="text" onfocus="this.value" id="input" />
+        <!-- Onfocus clears the input field on click. -->
+        <button type="text" id="add">Add</button>
+        <button type="text" id="remove">Remove</button>
+        <button></button>
       </div>
-
-      <ul id="liUl">
-        <li>Pay bills</li>
-        <li>Study</li>
-        <li>Train</li>
-        <li>Cook diner</li>
-        <li>Read book</li>
-        <li>Clean</li>
-      </ul>
     </main>
-    <footer>
-      <p>Contact and other</p>
-    </footer>
-    <button type="button" id="testButton">add</button>
-    <button type="button" id="rembutton">rem</button>
-    <input type="text" id="Testinput" />
   </body>
 </html>
