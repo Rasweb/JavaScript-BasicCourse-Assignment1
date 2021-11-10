@@ -3,12 +3,21 @@ $f: flex;
 main {
   display: $f;
   flex-direction: column;
-  text-align: center;
+  margin-top: 3%;
+}
+#control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.close {
-  color: red;
-  font-size: 1.4rem;
+#liUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
 }
 
 ul li.checked {
@@ -18,29 +27,37 @@ ul li.checked {
 }
 
 ul li {
-  display: $f;
-  justify-content: space-between;
+  //justify-content: space-between;
+  //align-items: center;
   cursor: pointer;
   list-style-type: none;
-  background: #eee;
+  background: #fffffe;
   font-size: 1.2rem;
   //height: 20%;
 }
 
 main button {
   width: 40%;
-  background-color: green;
   cursor: pointer;
 }
 
+#add {
+  background-color: green;
+}
+
+#remove {
+  background-color: red;
+}
+
+#sort {
+  background-color: steelblue;
+}
+
 li {
+  //display: flex;
+  //justify-content: center;
   list-style: none;
   border: 1px solid grey;
   width: 50%;
-  text-align: center;
   border-radius: 20%;
-}
-
-.control {
-  margin: 2%;
 }

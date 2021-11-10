@@ -2,10 +2,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #128cfc;
 }
 
 header {
-  background-color: royalblue;
+  background-color: #0b5aa2;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,23 +18,33 @@ header #titleCon {
 }
 header #titleCon #top {
   font-weight: 900;
-  color: #1f2f56;
+  color: #071a4b;
   margin-bottom: 5%;
 }
 header #titleCon #bottom {
   margin-top: 3%;
-  color: #7280a7;
+  color: #787f97;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  margin-top: 3%;
 }
 
-.close {
-  color: red;
-  font-size: 1.4rem;
+#control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#liUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
 }
 
 ul li.checked {
@@ -43,37 +54,34 @@ ul li.checked {
 }
 
 ul li {
-  display: flex;
-  justify-content: space-between;
   cursor: pointer;
   list-style-type: none;
-  background: #eee;
+  background: #fffffe;
   font-size: 1.2rem;
 }
 
 main button {
   width: 40%;
-  background-color: green;
   cursor: pointer;
+}
+
+#add {
+  background-color: green;
+}
+
+#remove {
+  background-color: red;
+}
+
+#sort {
+  background-color: steelblue;
 }
 
 li {
   list-style: none;
   border: 1px solid grey;
   width: 50%;
-  text-align: center;
   border-radius: 20%;
-}
-
-.control {
-  margin: 2%;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  height: 33vh;
-  border: 2px solid green;
 }
 
 /*# sourceMappingURL=main.css.map */

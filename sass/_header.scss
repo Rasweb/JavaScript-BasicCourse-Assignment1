@@ -1,5 +1,5 @@
 header {
-  background-color: royalblue;
+  background-color: #0b5aa2;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -10,12 +10,12 @@ header {
     flex-direction: column;
     #top {
       font-weight: 900;
-      color: hsl(223, 47%, 23%);
+      color: hsl(223, 83%, 16%);
       margin-bottom: 5%;
     }
     #bottom {
       margin-top: 3%;
-      color: hsl(224, 23%, 55%);
+      color: hsl(225, 13%, 53%);
     }
   }
 }

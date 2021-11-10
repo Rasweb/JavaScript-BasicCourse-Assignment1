@@ -2,8 +2,9 @@ html,
 body {
   margin: 0;
   padding: 0;
+  //background-color: slategrey;
+  background-color: #128cfc;
 }
 
 @import "header";
 @import "main";
-@import "footer";
