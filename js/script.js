@@ -58,6 +58,10 @@ function jsLists() {
   }
 }
 
+// Creates the div control tag.
+let control = document.createElement("div");
+control.id = "control";
+
 // Add Button
 let divControl = document.createElement("div");
 divControl.id = "control";
