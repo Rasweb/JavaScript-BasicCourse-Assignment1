@@ -1,12 +1,32 @@
 window.onload = function () {
+  headerfunc();
   document.getElementById("add").addEventListener("click", addButton);
   document.getElementById("remove").addEventListener("click", removeButton);
   jsLists();
   check();
-  header();
-  // jsAdd();
-  // jsRemove();
 };
+
+function headerfunc() {
+  // Creates the html tags.
+  let header = document.getElementById("header");
+  //
+  let titleCon = document.createElement("div");
+  titleCon.id = "titleCon";
+  //
+  let top = document.createElement("h1");
+  top.id = "top";
+  top.innerHTML = "To-Do List";
+  //
+  let bottom = document.createElement("h2");
+  bottom.id = "bottom";
+  bottom.innerHTML = "Coded by Rasmus";
+
+  titleCon.appendChild(top);
+  titleCon.appendChild(bottom);
+  header.appendChild(titleCon);
+
+  // Appends the tags to each other.
+}
 
 // Main
 // Create the Ul.
@@ -27,24 +47,14 @@ function jsLists() {
   for (let i = 0; i < jsList.length; i++) {
     // Find the main tag.
     let main = document.getElementById("main");
+
     // Create the div, ul and li tag.
     let jsLi = document.createElement("li");
     jsLi.innerHTML = jsList[i];
     jsUl.appendChild(jsLi);
     main.appendChild(jsUl);
+    document.body.appendChild(main);
   }
-}
-
-// Add a "checked" symbol when clicking on a list item
-// querySelector returns the first element that matches.
-function check() {
-  let list = document.querySelector("ul");
-  list.addEventListener("click", function (e) {
-    if (e.target.tagName === "LI") {
-      // Returns the list, its allways in uppercase
-      e.target.classList.toggle("checked");
-    }
-  });
 }
 
 // Add Button
@@ -72,6 +82,17 @@ function removeButton() {
     let last = listItems[listItems.length - 1];
     last.parentNode.removeChild(last);
   }
+}
+// Add a "checked" symbol when clicking on a list item
+// querySelector returns the first element that matches.
+function check() {
+  let list = document.querySelector("ul");
+  list.addEventListener("click", function (e) {
+    if (e.target.tagName === "LI") {
+      // Returns the list, its allways in uppercase
+      e.target.classList.toggle("checked");
+    }
+  });
 }
 
 // Footer
