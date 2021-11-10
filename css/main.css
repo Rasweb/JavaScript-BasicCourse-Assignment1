@@ -10,7 +10,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 15%;
+  height: 20vh;
 }
 header #titleCon {
   display: flex;
@@ -54,6 +54,8 @@ ul li.checked {
 }
 
 ul li {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   list-style-type: none;
   background: #fffffe;
