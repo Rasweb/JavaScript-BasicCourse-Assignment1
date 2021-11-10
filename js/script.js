@@ -2,6 +2,7 @@ window.onload = function () {
   headerfunc();
   document.getElementById("add").addEventListener("click", addButton);
   document.getElementById("remove").addEventListener("click", removeButton);
+  document.getElementById("sort").addEventListener("click", sort);
   jsLists();
   check();
 };
@@ -93,6 +94,37 @@ function check() {
       e.target.classList.toggle("checked");
     }
   });
+}
+
+// Sort the list in a alphabetical order.
+function sort() {
+  // Empty variables
+  let run, stop;
+
+  // Loop will continue until sort has been done.
+  let sort_list = document.getElementById("liUl");
+  run = true;
+
+  while (run) {
+    run = false;
+    // li is the <li>.
+    let li = sort_list.getElementsByTagName("LI");
+    // Loop through the list.
+    for (i = 0; i < li.length - 1; i++) {
+      stop = false;
+      if (li[i].innerHTML.toLowerCase() > li[i + 1].innerHTML.toLowerCase()) {
+        // Sorting the items in alphabeticall order.
+        // If item should be sorted mark as stop and break.
+        stop = true;
+        break;
+      }
+    }
+    if (stop) {
+      li[i].parentNode.insertBefore(li[i + 1], li[i]);
+      // If item has been marked with stop sort the item.
+      run = true;
+    }
+  }
 }
 
 // Footer
