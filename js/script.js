@@ -8,14 +8,6 @@ window.onload = function () {
   // jsRemove();
 };
 
-// Header
-function header() {
-  let h1 = document.createElement("h1");
-  h1.innerHTML = "To-Do List";
-  document.getElementById("header").appendChild(h1);
-  // header.appendChild(h1);
-}
-
 // Main
 // Create the Ul.
 let jsUl = document.createElement("ul");
