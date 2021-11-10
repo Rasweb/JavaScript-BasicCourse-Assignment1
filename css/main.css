@@ -63,6 +63,7 @@ ul li {
 main button {
   width: 40%;
   cursor: pointer;
+  border-radius: 20%;
 }
 
 #add {
@@ -75,6 +76,10 @@ main button {
 
 #sort {
   background-color: steelblue;
+}
+
+#input {
+  border-radius: 20%;
 }
 
 li {
