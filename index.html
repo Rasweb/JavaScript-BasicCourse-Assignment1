@@ -12,8 +12,15 @@
     <header id="header"></header>
     <main id="main">
       <div id="control">
-        <input type="text" id="input" placeholder="Write something to do" />
-        <!-- Onfocus clears the input field on click. -->
+        <form>
+          <input
+            type="text"
+            id="input"
+            onfocus="this.value=''"
+            placeholder="Write something to do"
+          />
+          <!-- onfocus="this.value=''", empty value means clear on click. -->
+        </form>
         <button type="text" id="add">Add</button>
         <button type="text" id="remove">Remove</button>
         <button type="text" id="sort">Sort</button>
