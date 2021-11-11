@@ -25,8 +25,6 @@ function headerfunc() {
   titleCon.appendChild(top);
   titleCon.appendChild(bottom);
   header.appendChild(titleCon);
-
-  // Appends the tags to each other.
 }
 
 // Main
@@ -88,6 +86,7 @@ function removeButton() {
     last.parentNode.removeChild(last);
   }
 }
+
 // Add a "checked" symbol when clicking on a list item
 // querySelector returns the first element that matches.
 function check() {
@@ -107,6 +106,7 @@ function sort() {
 
   // Loop will continue until sort has been done.
   let sort_list = document.getElementById("liUl");
+  let last = document.getElementsByClassName("checked");
   run = true;
 
   while (run) {
@@ -130,5 +130,3 @@ function sort() {
     }
   }
 }
-
-// Footer
