@@ -26,6 +26,32 @@ header #titleCon #bottom {
   color: #787f97;
 }
 
+@media screen and (min-width: 786px) {
+  header {
+    height: 22vh;
+  }
+  header #titleCon #top {
+    margin-bottom: 6%;
+    font-size: 2.2rem;
+  }
+  header #titleCon #bottom {
+    margin-top: 4%;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 24vh;
+  }
+  header #titleCon #top {
+    margin-bottom: 7%;
+    font-size: 3rem;
+  }
+  header #titleCon #bottom {
+    margin-top: 5%;
+    font-size: 2rem;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
