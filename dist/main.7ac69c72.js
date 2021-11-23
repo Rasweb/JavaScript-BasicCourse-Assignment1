@@ -24,12 +24,6 @@ function headerfunc() {
     titleCon.appendChild(bottom);
     header.appendChild(titleCon);
 }
-// class todo {
-//   constructor(myli, mycheck) {
-//     this.name = String;
-//     this.check = Boolean;
-//   }
-// }
 // Main
 // Create the Ul.
 let jsUl = document.createElement("ul");
@@ -67,12 +61,12 @@ function addButton() {
     // ) as HTMLInputElement;
     let addB = document.getElementById("add"); // Finds the add button.
     let addUl = document.getElementById("liUl"); // Finds the ul.
-    let inpB = document.getElementById("input"); // Finds the input button.
+    let inpB = document.getElementById("liInput"); // Finds the input button.
     let nLi = document.createElement("li"); // Creates the li.
     nLi.appendChild(document.createTextNode(inpB.value)); // Appends the input value.
     addUl.appendChild(nLi); // Appends the li to ul.
 }
-// Remove button
+// // Remove button
 function removeButton() {
     // Finds the remove button.
     let remB = document.getElementById("remove");
@@ -132,4 +126,4 @@ function liAdd() {
     theUl.appendChild(theLi); // Appends to the ul to make a list
 }
 
-//# sourceMappingURL=index.dfaa5ea5.js.map
+//# sourceMappingURL=main.7ac69c72.js.map

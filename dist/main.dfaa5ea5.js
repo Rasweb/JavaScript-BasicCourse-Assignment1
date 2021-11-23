@@ -1,38 +1,37 @@
-window.onload = function () {
-    document.getElementById("save").addEventListener("click", addTodo);
+window.onload = function() {
+    document.getElementById("lägg").addEventListener("click", addTodo);
     createHtml();
 };
-var Todo = /** @class */ (function () {
-    function Todo(todo) {
+class Todo {
+    constructor(todo){
         this.item = todo;
         this.done = false;
     }
-    return Todo;
-}());
-var todos = [];
+}
+let todos = [];
 function addTodo() {
-    var input = document.getElementById("todo");
-    var newTodo = new Todo(input.value);
+    let input = document.getElementById("todo");
+    let newTodo = new Todo(input.value);
     todos.push(newTodo);
     input.value = "";
     createHtml();
 }
 function createHtml() {
-    var todolist = document.getElementById("todolist");
+    let todolist = document.getElementById("todolist");
     todolist.innerHTML = "";
-    var _loop_1 = function (i) {
-        var li = document.createElement("li");
-        var span = document.createElement("span");
-        var markAsDoneButton = document.createElement("button");
-        var removeButton = document.createElement("button");
+    for(let i = 0; i < todos.length; i++){
+        let li = document.createElement("li");
+        let span = document.createElement("span");
+        let markAsDoneButton = document.createElement("button");
+        let removeButton = document.createElement("button");
         markAsDoneButton.innerHTML = "Markera som klar";
-        markAsDoneButton.addEventListener("click", function () {
+        markAsDoneButton.addEventListener("click", ()=>{
             todos[i].done = !todos[i].done;
             createHtml();
         });
         removeButton.innerHTML = "Ta bort";
         removeButton.className = "remove";
-        removeButton.addEventListener("click", function () {
+        removeButton.addEventListener("click", ()=>{
             todos.splice(i, 1);
             createHtml();
         });
@@ -45,8 +44,7 @@ function createHtml() {
         li.appendChild(markAsDoneButton);
         li.appendChild(removeButton);
         todolist.appendChild(li);
-    };
-    for (var i = 0; i < todos.length; i++) {
-        _loop_1(i);
     }
 }
+
+//# sourceMappingURL=main.dfaa5ea5.js.map
