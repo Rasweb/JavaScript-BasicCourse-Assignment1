@@ -65,10 +65,6 @@ let divControl = document.createElement("div");
 divControl.id = "control";
 
 function addButton() {
-  // let addUl: HTMLInputElement = document.getElementById(
-  //   "liUl"
-  // ) as HTMLInputElement;
-
   let addB = document.getElementById("add"); // Finds the add button.
   let addUl = document.getElementById("liUl"); // Finds the ul.
   let inpB = document.getElementById("input"); // Finds the input button.
@@ -77,7 +73,7 @@ function addButton() {
   addUl.appendChild(nLi); // Appends the li to ul.
 }
 
-// // Remove button
+// Remove button
 function removeButton() {
   // Finds the remove button.
   let remB = document.getElementById("remove");
@@ -133,13 +129,4 @@ function sort() {
       run = true;
     }
   }
-}
-
-//Adds the list items dynamically and the span tag with class.
-function liAdd() {
-  let theUl = document.getElementById("liUl"); // Finds the <ul>.
-  let theInpt = document.getElementById("liInput"); // Finds the <input>.
-  let theLi = document.createElement("li"); // Creates the <li>.
-  theLi.appendChild(document.createTextNode(theInpt.value)); // Appends the input value using a textnode.
-  theUl.appendChild(theLi); // Appends to the ul to make a list
 }

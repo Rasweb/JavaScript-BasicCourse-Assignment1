@@ -3,14 +3,21 @@ $f: flex;
 main {
   display: $f;
   flex-direction: column;
-  height: 80vh;
-  border: 2px solid red;
-  text-align: center;
+  margin-top: 3%;
+}
+#control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.close {
-  color: red;
-  font-size: 1.4rem;
+#liUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
 }
 
 ul li.checked {
@@ -20,29 +27,86 @@ ul li.checked {
 }
 
 ul li {
-  display: $f;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   list-style-type: none;
-  background: #eee;
+  background: #fffffe;
   font-size: 1.2rem;
-  //height: 20%;
 }
 
 main button {
-  width: 40%;
-  background-color: green;
+  width: 42%;
   cursor: pointer;
+  border-radius: 20%;
+  font-size: 0.9rem;
 }
 
+#add {
+  background-color: green;
+}
+
+#remove {
+  background-color: salmon;
+}
+
+#sort {
+  background-color: steelblue;
+}
+
+#input {
+  border-radius: 20%;
+  font-size: 0.9rem;
+  text-align: center;
+}
 li {
   list-style: none;
   border: 1px solid grey;
   width: 50%;
-  text-align: center;
   border-radius: 20%;
 }
 
-.control {
-  margin: 2%;
+@media screen and (min-width: 786px) {
+  #liUl {
+    margin-right: 5%;
+  }
+
+  ul li {
+    font-size: 1.4rem;
+  }
+
+  main button {
+    width: 45%;
+    font-size: 1rem;
+  }
+
+  #input {
+    width: 44vw;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #liUl {
+    margin-right: 2.8%;
+  }
+
+  ul li {
+    font-size: 1.6rem;
+  }
+
+  main button {
+    width: 52%;
+    font-size: 1.2rem;
+  }
+
+  #input {
+    width: 51.4vw;
+    font-size: 1.2rem;
+    margin-right: 2%;
+  }
+
+  li {
+    width: 55%;
+  }
 }
