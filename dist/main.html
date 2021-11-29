@@ -13,16 +13,13 @@
     <main id="main">
       <div class="control">
         <form>
-          <input type="text" onfocus="this.value=''" id="liInput">
-          <!-- onfocus clears the input field on click. -->
+          <input type="text" id="input" onfocus="this.value=''" placeholder="Write something to do">
+          <!-- onfocus="this.value=''", empty value means clear on click. -->
         </form>
         <button type="button" id="sort">Sort</button>
         <button type="button" id="add">Add</button>
         <button type="button" id="remove">remove</button>
       </div>
     </main>
-    <!-- <footer>
-      <p>Contact and other</p>
-    </footer> -->
   </body>
 </html>
