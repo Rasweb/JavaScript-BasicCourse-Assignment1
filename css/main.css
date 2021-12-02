@@ -52,17 +52,8 @@ header #titleCon #bottom {
     font-size: 2rem;
   }
 }
-main {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3%;
-}
-
-#control {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+h1 {
+  text-align: center;
 }
 
 #liUl {
@@ -86,6 +77,18 @@ ul li {
   list-style-type: none;
   background: #fffffe;
   font-size: 1.2rem;
+}
+
+li button {
+  margin-left: 20px;
+  margin-top: 12px;
+  height: 30px;
+  width: 30px;
+  background-color: salmon;
+}
+
+p {
+  width: 100px;
 }
 
 main button {
@@ -146,17 +149,6 @@ li {
 
   ul li {
     font-size: 1.6rem;
-  }
-
-  main button {
-    width: 52%;
-    font-size: 1.2rem;
-  }
-
-  #input {
-    width: 51.4vw;
-    font-size: 1.2rem;
-    margin-right: 2%;
   }
 
   li {
