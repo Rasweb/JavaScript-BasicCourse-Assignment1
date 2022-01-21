@@ -1,0 +1,31 @@
+@mixin flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+}
+
+@mixin margin($mt: 0, $mr: 0, $ml: 0) {
+  margin-top: $mt;
+  margin-right: $mr;
+  margin-left: $ml;
+}
+
+@mixin ipad {
+  @media screen and (min-width: 786px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

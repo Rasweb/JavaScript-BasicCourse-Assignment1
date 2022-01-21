@@ -115,6 +115,7 @@ function createSort() {
   btnSortDone.id = "sortDone";
   btnSortDone.addEventListener("click", sortDone);
   let divDone = document.createElement("div");
+  divDone.id = "sortDone";
   divDone.appendChild(btnSortDone);
   document.body.appendChild(divDone);
 }

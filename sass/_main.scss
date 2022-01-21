@@ -1,14 +1,21 @@
-$f: flex;
+@use "mixins";
 
 h1 {
   text-align: center;
+  color: white;
 }
+
 #liUl {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include mixins.flex-c;
+  @include mixins.center;
   align-items: center;
-  margin-right: 10%;
+  @include mixins.margin(0, 10%);
+  @include mixins.ipad {
+    @include mixins.margin(0, 5%);
+  }
+  @include mixins.desktop {
+    @include mixins.margin(0, 2.8%);
+  }
 }
 
 ul li.checked {
@@ -18,86 +25,81 @@ ul li.checked {
 }
 
 ul li {
-  display: flex;
-  justify-content: center;
+  @include mixins.center;
   cursor: pointer;
   list-style-type: none;
   background: #fffffe;
-  font-size: 1.2rem;
+  @include mixins.fontSize(1.2rem);
+  @include mixins.ipad {
+    @include mixins.fontSize(1.4rem);
+  }
+  @include mixins.desktop {
+    @include mixins.fontSize(1.7rem);
+  }
 }
 
 li button {
-  margin-left: 20px;
-  margin-top: 12px;
+  @include mixins.margin(12px, 0, 20px);
   height: 30px;
   width: 30px;
   background-color: salmon;
+  @include mixins.desktop {
+    height: 40px;
+    width: 40px;
+    font-size: 1.1rem;
+  }
 }
 
 p {
   width: 100px;
+  @include mixins.desktop {
+    width: 200px;
+  }
 }
 
-main button {
-  width: 42%;
-  cursor: pointer;
-  border-radius: 20%;
-  font-size: 0.9rem;
-}
-
-#add {
-  background-color: green;
-}
-
-#remove {
-  background-color: salmon;
-}
-
-#sort {
-  background-color: steelblue;
-}
-
-#input {
-  border-radius: 20%;
-  font-size: 0.9rem;
-  text-align: center;
-}
 li {
   list-style: none;
   border: 1px solid grey;
   width: 50%;
   border-radius: 20%;
-}
-
-@media screen and (min-width: 786px) {
-  #liUl {
-    margin-right: 5%;
-  }
-
-  ul li {
-    font-size: 1.4rem;
-  }
-
-  main button {
-    width: 45%;
-    font-size: 1rem;
-  }
-
-  #input {
-    width: 44vw;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #liUl {
-    margin-right: 2.8%;
-  }
-
-  ul li {
-    font-size: 1.6rem;
-  }
-  li {
+  @include mixins.desktop {
     width: 55%;
+  }
+}
+
+#addItemCont {
+  @include mixins.center;
+  #addItem {
+    @include mixins.fontSize(1.1rem);
+    @include mixins.ipad {
+      @include mixins.fontSize(1.4rem);
+    }
+    @include mixins.desktop {
+      @include mixins.fontSize(1.6rem);
+    }
+  }
+  #btnAddItem {
+    @include mixins.margin(0, 0, 10px);
+    @include mixins.fontSize(1.1rem);
+    border: none;
+    border-radius: 20%;
+    @include mixins.ipad {
+      @include mixins.fontSize(1.4rem);
+    }
+    @include mixins.desktop {
+      @include mixins.fontSize(1.6rem);
+    }
+  }
+}
+#sortDone {
+  @include mixins.center;
+  @include mixins.fontSize(1.1rem);
+  margin: 10px;
+  border-radius: 20%;
+  @include mixins.ipad {
+    @include mixins.fontSize(1.4rem);
+  }
+  @include mixins.desktop {
+    @include mixins.fontSize(1.6rem);
   }
 }

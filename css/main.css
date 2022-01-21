@@ -2,66 +2,37 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #128cfc;
+  background-color: #000000;
 }
 
-header {
-  background-color: #0b5aa2;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 20vh;
-}
-header #titleCon {
-  display: flex;
-  flex-direction: column;
-}
-header #titleCon #top {
-  font-weight: 900;
-  color: #071a4b;
-  margin-bottom: 5%;
-}
-header #titleCon #bottom {
-  margin-top: 3%;
-  color: #787f97;
-}
-
-@media screen and (min-width: 786px) {
-  header {
-    height: 22vh;
-  }
-  header #titleCon #top {
-    margin-bottom: 6%;
-    font-size: 2.2rem;
-  }
-  header #titleCon #bottom {
-    margin-top: 4%;
-    font-size: 1.6rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header {
-    height: 24vh;
-  }
-  header #titleCon #top {
-    margin-bottom: 7%;
-    font-size: 3rem;
-  }
-  header #titleCon #bottom {
-    margin-top: 5%;
-    font-size: 2rem;
-  }
-}
 h1 {
   text-align: center;
+  color: white;
 }
 
 #liUl {
   display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
   margin-right: 10%;
+  margin-left: 0;
+}
+@media screen and (min-width: 786px) {
+  #liUl {
+    margin-top: 0;
+    margin-right: 5%;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #liUl {
+    margin-top: 0;
+    margin-right: 2.8%;
+    margin-left: 0;
+  }
 }
 
 ul li.checked {
@@ -78,42 +49,40 @@ ul li {
   background: #fffffe;
   font-size: 1.2rem;
 }
+@media screen and (min-width: 786px) {
+  ul li {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  ul li {
+    font-size: 1.7rem;
+  }
+}
 
 li button {
-  margin-left: 20px;
   margin-top: 12px;
+  margin-right: 0;
+  margin-left: 20px;
   height: 30px;
   width: 30px;
   background-color: salmon;
+}
+@media screen and (min-width: 1024px) {
+  li button {
+    height: 40px;
+    width: 40px;
+    font-size: 1.1rem;
+  }
 }
 
 p {
   width: 100px;
 }
-
-main button {
-  width: 42%;
-  cursor: pointer;
-  border-radius: 20%;
-  font-size: 0.9rem;
-}
-
-#add {
-  background-color: green;
-}
-
-#remove {
-  background-color: salmon;
-}
-
-#sort {
-  background-color: steelblue;
-}
-
-#input {
-  border-radius: 20%;
-  font-size: 0.9rem;
-  text-align: center;
+@media screen and (min-width: 1024px) {
+  p {
+    width: 200px;
+  }
 }
 
 li {
@@ -122,37 +91,63 @@ li {
   width: 50%;
   border-radius: 20%;
 }
+@media screen and (min-width: 1024px) {
+  li {
+    width: 55%;
+  }
+}
 
+#addItemCont {
+  display: flex;
+  justify-content: center;
+}
+#addItemCont #addItem {
+  font-size: 1.1rem;
+}
 @media screen and (min-width: 786px) {
-  #liUl {
-    margin-right: 5%;
-  }
-
-  ul li {
+  #addItemCont #addItem {
     font-size: 1.4rem;
-  }
-
-  main button {
-    width: 45%;
-    font-size: 1rem;
-  }
-
-  #input {
-    width: 44vw;
-    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  #liUl {
-    margin-right: 2.8%;
-  }
-
-  ul li {
+  #addItemCont #addItem {
     font-size: 1.6rem;
   }
+}
+#addItemCont #btnAddItem {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 10px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 20%;
+}
+@media screen and (min-width: 786px) {
+  #addItemCont #btnAddItem {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #addItemCont #btnAddItem {
+    font-size: 1.6rem;
+  }
+}
 
-  li {
-    width: 55%;
+#sortDone {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin: 10px;
+  border-radius: 20%;
+}
+@media screen and (min-width: 786px) {
+  #sortDone {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #sortDone {
+    font-size: 1.6rem;
   }
 }
 

@@ -2,8 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #128cfc;
+  background-color: #000000;
 }
 
-@import "header";
 @import "main";
+@import "_mixins";
