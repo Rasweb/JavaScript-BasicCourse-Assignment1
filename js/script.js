@@ -1,5 +1,7 @@
 window.onload = function () {
   createHtmlLi();
+  document.getElementById("btnAddItem").addEventListener("click", addToDos);
+  createSort();
 };
 
 //1. A class that describes a task
@@ -73,14 +75,48 @@ function createHtmlLi() {
   document.getElementById("objectLi-con").appendChild(jsUl);
 }
 
+// Splice the one item from the array.
+function removeItem(i) {
+  objectToArray.splice(i, 1);
+  createHtmlLi();
+}
+
 // The ! inverts the boolean expression so it can be checked.
 function check(i) {
   objectToArray[i].done = !objectToArray[i].done;
   createHtmlLi();
 }
 
-// Splice the one item from the array.
-function removeItem(i) {
-  objectToArray.splice(i, 1);
+// The function for the sort action.
+function createSort() {
+  let btnSortDone = document.createElement("button");
+  btnSortDone.innerHTML = "Sort Done";
+  btnSortDone.id = "sortDone";
+  btnSortDone.addEventListener("click", sortDone);
+  let divDone = document.createElement("div");
+  divDone.appendChild(btnSortDone);
+  document.body.appendChild(divDone);
+}
+
+// Sort by done.
+function sortDone() {
+  objectToArray.sort(function (a, b) {
+    return a.done - b.done;
+  });
+  createHtmlLi();
+}
+
+// Add item to array.
+function addToDos() {
+  // Prevents the form from refreshing the site on click.
+  event.preventDefault();
+  let input = document.getElementById("addItem");
+  // The value the user writes.
+  let newItem = new JsList(input.value, false);
+  // Adds the new item to the array.
+  objectToArray.push(newItem);
+  // Clears the input field.
+  document.getElementById("addItem").value = "";
+  // Calls the creathtml because there is a new item in the array.
   createHtmlLi();
 }
