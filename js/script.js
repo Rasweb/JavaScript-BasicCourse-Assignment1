@@ -2,6 +2,7 @@ window.onload = function () {
   createHtmlLi();
   document.getElementById("btnAddItem").addEventListener("click", addToDos);
   createSort();
+  toLocalStorage();
 };
 
 //1. A class that describes a task
@@ -30,6 +31,24 @@ let objectToArray = [
   fifthObject,
   sixthObject,
 ];
+
+// LocalStorge
+function toLocalStorage() {
+  // Convert the array of objects to JSON.
+  let toJson = JSON.stringify(objectToArray);
+
+  // Put the JSON array in localStorage.
+  localStorage.setItem("array", toJson);
+
+  // Gets the array from localStorage.
+  let fromLocal = localStorage.getItem("array");
+
+  // Parse the array from JSON so it can be read.
+  let parseArray = JSON.parse(fromLocal);
+
+  // log the array.
+  console.log(parseArray);
+}
 
 function createHtmlLi() {
   // empties the HTML DOM so changes will take place.
@@ -78,6 +97,8 @@ function createHtmlLi() {
 // Splice the one item from the array.
 function removeItem(i) {
   objectToArray.splice(i, 1);
+  // Sets the localStorage again to update the array.
+  toLocalStorage();
   createHtmlLi();
 }
 
@@ -104,6 +125,8 @@ function sortDone() {
     return a.done - b.done;
   });
   createHtmlLi();
+  // Updates the localStorge to move the checked item at the bottom.
+  toLocalStorage();
 }
 
 // Add item to array.
@@ -119,4 +142,6 @@ function addToDos() {
   document.getElementById("addItem").value = "";
   // Calls the creathtml because there is a new item in the array.
   createHtmlLi();
+  // Sets the localStorage again to add the new item.
+  toLocalStorage();
 }
