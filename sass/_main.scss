@@ -61,7 +61,8 @@ li {
   list-style: none;
   border: 1px solid grey;
   width: 50%;
-  border-radius: 20%;
+  border-radius: 30px;
+  margin: 1%;
   @include mixins.desktop {
     width: 55%;
   }
@@ -82,7 +83,7 @@ li {
     @include mixins.margin(0, 0, 10px);
     @include mixins.fontSize(1.1rem);
     border: none;
-    border-radius: 20%;
+    border-radius: 15px;
     @include mixins.ipad {
       @include mixins.fontSize(1.4rem);
     }
@@ -95,7 +96,7 @@ li {
   @include mixins.center;
   @include mixins.fontSize(1.1rem);
   margin: 10px;
-  border-radius: 20%;
+  border-radius: 25px;
   @include mixins.ipad {
     @include mixins.fontSize(1.4rem);
   }
